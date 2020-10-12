@@ -15,8 +15,6 @@ matrix:
             - gperf
             - lcov
             - libgd-dev
-            - php5
-            - php5-gd
             - unzip
             - valgrind
       env:
@@ -33,8 +31,6 @@ matrix:
             - gperf
             - lcov
             - libgd-dev
-            - php5
-            - php5-gd
             - unzip
             - valgrind
       env:
