@@ -21,8 +21,47 @@ matrix:
             - valgrind
       env:
         - MATRIX_EVAL="CC=gcc && CXX=g++"
+    - os: linux
+      arch: arm64
+      dist: trusty
+      addons:
+        apt:
+          packages:
+            - apache2
+            - build-essential
+            - gcovr
+            - gperf
+            - lcov
+            - libgd-dev
+            - php5
+            - php5-gd
+            - unzip
+            - valgrind
+      env:
+        - MATRIX_EVAL="CC=gcc && CXX=g++"
 
     - os: linux
+      dist: trusty
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - apache2
+            - build-essential
+            - gcovr
+            - gperf
+            - g++-5
+            - lcov
+            - libgd-dev
+            - php5
+            - php5-gd
+            - unzip
+            - valgrind
+      env:
+        - MATRIX_EVAL="CC=gcc-5 && CXX=g++-5"
+    - os: linux
+      arch: arm64
       dist: trusty
       addons:
         apt:
@@ -63,8 +102,50 @@ matrix:
             - valgrind
       env:
         - MATRIX_EVAL="CC=gcc-6 && CXX=g++-6"
+    - os: linux
+      arch: arm64
+      dist: trusty
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - apache2
+            - build-essential
+            - gcovr
+            - gperf
+            - g++-6
+            - lcov
+            - libgd-dev
+            - php5
+            - php5-gd
+            - unzip
+            - valgrind
+      env:
+        - MATRIX_EVAL="CC=gcc-6 && CXX=g++-6"
 
     - os: linux
+      dist: trusty
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - apache2
+            - build-essential
+            - gcovr
+            - gperf
+            - g++-7
+            - lcov
+            - libgd-dev
+            - php5
+            - php5-gd
+            - unzip
+            - valgrind
+      env:
+        - MATRIX_EVAL="CC=gcc-7 && CXX=g++-7"
+    - os: linux
+      arch: arm64
       dist: trusty
       addons:
         apt:
