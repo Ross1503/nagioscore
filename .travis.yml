@@ -230,6 +230,7 @@ matrix:
 before_install:
   - eval "${MATRIX_EVAL}"
   - sudo cat /etc/os-release
+  - dpkg -l | grep php| awk '{print $2}' |tr "\n" " "
 
 script:
   - ./configure --enable-testing
