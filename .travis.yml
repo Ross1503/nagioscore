@@ -30,6 +30,8 @@ matrix:
             - gcovr
             - gperf
             - lcov
+            - php7
+            - php7-gd
             - libgd-dev
             - unzip
             - valgrind
