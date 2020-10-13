@@ -229,6 +229,7 @@ matrix:
 
 before_install:
   - eval "${MATRIX_EVAL}"
+  - sudo cat /etc/os-release
 
 script:
   - ./configure --enable-testing
