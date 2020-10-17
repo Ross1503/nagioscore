@@ -60,7 +60,7 @@ int t_end(void)
 	return failed ? EXIT_FAILURE : EXIT_SUCCESS;
 }
 
-static int t_okv(int success, const char *fmt, va_list ap)
+static int t_okv(int success, const char *fmt, va_list *ap)
 {
 	passed += !!success;
 	failed += !success;
@@ -82,13 +82,13 @@ static int t_okv(int success, const char *fmt, va_list ap)
 int t_ok(int success, const char *fmt, ...)
 {
 	va_list ap;
-	printf("!!!!!!!!!!!!!!!!! %s !!!!!!!!!!!!!!!!!!", fmt);
 
 	if (fmt) {
 		va_start(ap, fmt);
 		t_okv(success, fmt, ap);
 		va_end(ap);
 	} else {
+		printf("!!!!!!!!!!!!!!!!! %s !!!!!!!!!!!!!!!!!!", fmt);
 		t_okv(success, NULL, NULL);
 	}
 	return success;
