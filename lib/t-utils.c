@@ -84,14 +84,13 @@ int t_ok(int success, const char *fmt, ...)
 	va_list ap;
 	printf("!!!!!!!!!!!!!!!!! %s !!!!!!!!!!!!!!!!!!", fmt);
 
-	if (1) {
+	if (fmt) {
 		va_start(ap, fmt);
 		t_okv(success, fmt, ap);
 		va_end(ap);
-	}
-	else
+	} else {
 		t_okv(success, NULL, NULL);
-	
+	}
 	return success;
 }
 
