@@ -90,7 +90,8 @@ int t_ok(int success, const char *fmt, ...)
 		va_end(ap);
 	}
 	else
-		t_okv(success, NULL, NULL);
+		t_okv(success, NULL, ap);
+	
 	return success;
 }
 
