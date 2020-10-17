@@ -89,10 +89,10 @@ int t_ok(int success, const char *fmt, ...)
 		t_okv(success, fmt, ap);
 		va_end(ap);
 	}
-	else
+	else {
 		printf("###############################################", fmt);
 		t_okv(success, NULL, NULL);
-
+	}
 	return success;
 }
 
