@@ -183,6 +183,27 @@ matrix:
 
     - os: linux
       dist: trusty
+      arch: arm64
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - apache2
+            - build-essential
+            - gcovr
+            - gperf
+            - g++-8
+            - lcov
+            - libgd-dev
+            - php5.6
+            - unzip
+            - valgrind
+      env:
+        - MATRIX_EVAL="CC=gcc-8 && CXX=g++-8"
+    
+    - os: linux
+      dist: trusty
       addons:
         apt:
           sources:
@@ -204,6 +225,27 @@ matrix:
 
     - os: linux
       dist: trusty
+      arch: arm64
+      addons:
+        apt:
+          sources:
+            - llvm-toolchain-trusty-5.0
+          packages:
+            - apache2
+            - build-essential
+            - clang-5.0
+            - gcovr
+            - gperf
+            - lcov
+            - libgd-dev
+            - php5.6
+            - unzip
+            - valgrind
+      env:
+        - MATRIX_EVAL="CC=clang-5.0 && CXX=clang++-5.0"
+    
+    - os: linux
+      dist: trusty
       addons:
         apt:
           sources:
@@ -220,6 +262,29 @@ matrix:
             - libgd-dev
             - php5
             - php5-gd
+            - unzip
+            - valgrind
+      env:
+        - MATRIX_EVAL="CC=clang-6.0 && CXX=clang++-6.0"
+    
+    - os: linux
+      dist: trusty
+      arch: arm64
+      addons:
+        apt:
+          sources:
+            - llvm-toolchain-trusty-6.0
+            - ubuntu-toolchain-r-test
+          packages:
+            - apache2
+            - build-essential
+            - clang-6.0
+            - gcovr
+            - gperf
+            - g++-4.9
+            - lcov
+            - libgd-dev
+            - php5.6
             - unzip
             - valgrind
       env:
