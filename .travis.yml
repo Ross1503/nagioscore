@@ -31,7 +31,6 @@ matrix:
             - gperf
             - lcov
             - php5.6
-            - php5.6-gd
             - libgd-dev
             - unzip
             - valgrind
