@@ -82,6 +82,7 @@ static int t_okv(int success, const char *fmt, va_list ap)
 int t_ok(int success, const char *fmt, ...)
 {
 	va_list ap;
+	va_list ap_copy;
 
 	if (fmt) {
 		printf("################### %s ###################", fmt);
@@ -90,7 +91,7 @@ int t_ok(int success, const char *fmt, ...)
 		va_end(ap);
 	} else {
 		printf("!!!!!!!!!!!!!!!!! %s !!!!!!!!!!!!!!!!!!", fmt);
-		t_okv(success, NULL, ap);
+		t_okv(success, NULL, ap_copy);
 	}
 	return success;
 }
