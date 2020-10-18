@@ -281,7 +281,7 @@ matrix:
             - clang-6.0
             - gcovr
             - gperf
-            - g++-4.9
+            #- g++-4.9
             - lcov
             - libgd-dev
             - php5.6
