@@ -80,7 +80,7 @@ static int t_okv(int success, const char *fmt, va_list ap)
 
 int t_ok(int success, const char *fmt, ...)
 {
-	LOCAL va_list empty_va_list;
+	va_list empty_va_list;
 	va_list ap;
 
 	if (fmt) {
