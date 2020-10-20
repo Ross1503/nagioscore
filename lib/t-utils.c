@@ -10,8 +10,6 @@ static const char *indent_str = "  ";
 #define min(a, b) (a < b ? a : b)
 #define delta(a, b) ((max(a, b) - (min(a, b))))
 
-LOCAL va_list empty_va_list;
-
 void t_reset(void)
 {
 	passed = failed = 0;
@@ -91,7 +89,7 @@ int t_ok(int success, const char *fmt, ...)
 		va_end(ap);
 	} else {
 		printf("!!!!!!!!!!!!!!!!! %s !!!!!!!!!!!!!!!!!!", fmt);
-		t_okv(success, NULL, empty_va_list);
+		t_okv(success, NULL, ap);
 	}
 	return success;
 }
